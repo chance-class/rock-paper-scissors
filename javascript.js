@@ -1,6 +1,6 @@
 //The computer needs to randomly make a choice between Rock, Paper, or Scissors.
 
-let choices = ['Rock', 'Paper', 'Scissors'];
+let choices = ['rock', 'paper', 'scissors'];
 let computerSelection;
 
 function getComputerSelection() {
@@ -16,30 +16,32 @@ let computerScore = 0;
 
 function gameRound () {
 let playerSelection = prompt("What is your choice?");
-if (playerSelection === "Rock" && computerSelection === "Paper") {
+if (playerSelection === ' ' || playerSelection === null) {
+  alert('You canceled the game. You forfeit this round.');
+  return computerScore++;
+} else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
   alert("You lose! Paper beats Rock.");
   return computerScore++;
-} else if (playerSelection === "Paper" && computerSelection == "Rock") {
+} else if (playerSelection.toLowerCase() === "paper" && computerSelection == "rock") {
   alert("You win! Paper beats Rock.");
   return playerScore++;
-} else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+} else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
   alert("You win! Rock beats Scissors.");
   return playerScore++;
-} else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+} else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
   alert("You lose! Rock beats Scissors.");
   return computerScore++;
-} else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+} else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
   alert("You win! Scissors beats Paper.");
   return playerScore++;
-} else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+} else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
   alert("You lose! Scissors beats Paper.");
   return computerScore++;
-} else if (playerSelection === computerSelection) {
+} else if (playerSelection.toLowerCase() === computerSelection) {
   alert("It's a tie!");
-} else if (playerSelection === ' ' || playerSelection === null) {
-    alert('You canceled the game.');
 } else {
-  alert('Choice must be either Rock, Paper, or Scissors.');
+  alert('Choice must be either Rock, Paper, or Scissors. You forfeit this round.');
+  return computerScore++;
 }
 }
 
