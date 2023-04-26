@@ -1,10 +1,14 @@
 //The computer needs to randomly make a choice between Rock, Paper, or Scissors.
 
 let choices = ['Rock', 'Paper', 'Scissors'];
+let computerSelection;
 
-let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+function getComputerChoice() {
+  computerSelection = choices[Math.floor(Math.random() * choices.length)];
+}
 
-console.log(computerChoice);
+getComputerChoice();
+console.log(computerSelection);
 
 //Get input from the user to make a choice between Rock, Paper, or Scissors.
 
