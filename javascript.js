@@ -16,6 +16,11 @@ let computerScore = 0;
 
 function gameRound () {
 let playerSelection = prompt("What is your choice?");
+
+//Compare the computer's choice and the user's choice and declare the winner.
+
+//Add 1 to the score of the winner.
+
 if (playerSelection === ' ' || playerSelection === null) {
   alert('You canceled the game. You forfeit this round.');
   return computerScore++;
@@ -45,8 +50,7 @@ if (playerSelection === ' ' || playerSelection === null) {
 }
 }
 
-getComputerSelection();
-gameRound();
+//Play 5 rounds.
 
 getComputerSelection();
 gameRound();
@@ -60,13 +64,21 @@ gameRound();
 getComputerSelection();
 gameRound();
 
-console.log(computerScore);
-console.log(playerScore);
+getComputerSelection();
+gameRound();
 
-//Compare the computer's choice and the user's choice and declare the winner.
+console.log("The computer's score is: " + computerScore);
+console.log("Your score is: " + playerScore);
 
-//Add 1 to the score of the winner.
+if (computerScore > playerScore) {
+  console.log("Oh no! The computer beat you! Seek revenge and resfresh the page to play again.");
+} else if (computerScore < playerScore) {
+  console.log("Hurrah! You beat the computer! Revel in your glory!");
+} else {
+  console.log("It's a tie! Seems like you're equally matched... Refresh the page to play again!");
+}
 
-//Repeat 4 more times.
+
+
 
 //Alert that is the end of the game.
