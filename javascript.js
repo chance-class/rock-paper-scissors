@@ -14,6 +14,8 @@ function getComputerSelection() {
 let playerScore = 0;
 let computerScore = 0;
 
+alert("Let's play Rock Paper Scissors! Best out of 5 wins. Think you can beat me?");
+
 function gameRound () {
 let playerSelection = prompt("What is your choice?");
 
@@ -67,18 +69,19 @@ gameRound();
 getComputerSelection();
 gameRound();
 
-console.log("The computer's score is: " + computerScore);
-console.log("Your score is: " + playerScore);
+//Alert that is the end of the game.
+
+alert("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 if (computerScore > playerScore) {
-  console.log("Oh no! The computer beat you! Seek revenge and resfresh the page to play again.");
+  alert("Well well well. Looks like I beat you! Seek revenge and refresh the page to play again, if you dare.");
 } else if (computerScore < playerScore) {
-  console.log("Hurrah! You beat the computer! Revel in your glory!");
+  alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
 } else {
-  console.log("It's a tie! Seems like you're equally matched... Refresh the page to play again!");
+  alert("Hmm. It's a tie. Seems like we're evenly matched... Bet you can't beat me next time! Refresh the page to find out.");
 }
 
 
 
 
-//Alert that is the end of the game.
+
