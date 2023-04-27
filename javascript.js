@@ -55,18 +55,23 @@ if (playerSelection === ' ' || playerSelection === null) {
 
 getComputerSelection();
 gameRound();
+console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 getComputerSelection();
 gameRound();
+console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 getComputerSelection();
 gameRound();
+console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 getComputerSelection();
 gameRound();
+console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 getComputerSelection();
 gameRound();
+console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 //Alert that is the end of the game.
 
@@ -77,7 +82,7 @@ if (computerScore > playerScore) {
 } else if (computerScore < playerScore) {
   alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
 } else {
-  alert("Hmm. It's a tie. Seems like we're evenly matched... Bet you can't beat me next time! Refresh the page to find out.");
+  alert("Hmm. It's a tie. Seems like we're evenly matched... Bet you can't beat me again! Refresh the page to find out.");
 }
 
 
