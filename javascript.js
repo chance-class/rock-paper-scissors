@@ -24,8 +24,7 @@ let playerSelection = prompt("What is your choice?");
 //Add 1 to the score of the winner.
 
 if (playerSelection === ' ' || playerSelection === null) {
-  alert('You canceled the game. You forfeit this round.');
-  return computerScore++;
+  return;
 } else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
   alert("You lose! Paper beats Rock.");
   return computerScore++;
