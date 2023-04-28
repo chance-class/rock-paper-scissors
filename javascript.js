@@ -53,26 +53,12 @@ if (playerSelection === ' ' || playerSelection === null) {
 }
 
 //Play 5 rounds.
+for (let i = 0; i < 5; i++) {
+  getComputerSelection();
+  gameRound();
+  console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
+}
 
-getComputerSelection();
-gameRound();
-console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
-
-getComputerSelection();
-gameRound();
-console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
-
-getComputerSelection();
-gameRound();
-console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
-
-getComputerSelection();
-gameRound();
-console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
-
-getComputerSelection();
-gameRound();
-console.log("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
 
 //Alert that is the end of the game.
 
