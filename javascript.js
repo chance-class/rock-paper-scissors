@@ -56,6 +56,24 @@ function gameRound () {
   }
 }
 
+const rockBtn = document.querySelector(#rockBtn);
+rockBtn.addEventListener('click', () => {
+  let playerSelection = "rock";
+  gameRound();
+})
+
+const paperBtn = document.querySelector(#paperBtn);
+paperBtn.addEventListener('click', () => {
+  let playerSelection = "paper";
+  gameRound();
+})
+
+const scissBtn = document.querySelector(#scissBtn);
+scissBtn.addEventListener('click', () => {
+  let playerSelection = "scissors";
+  gameRound();
+})
+
 
 
 
