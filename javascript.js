@@ -43,7 +43,7 @@ function gameRound () {
     } else {
       alert("It's a tie!");
     }
-  } else if (playerSelection() === "scissors") {
+  } else if (playerSelection === "scissors") {
     if (computerSelection === "paper") {
       alert("You win! Scissors beats Paper.");
       return playerScore++;
@@ -57,34 +57,41 @@ function gameRound () {
 }
 
 const rockBtn = document.querySelector('#rockBtn');
+
 rockBtn.addEventListener('click', () => {
   playerSelection = "rock";
   gameRound();
-  console.log(playerScore, computerScore)
+  console.log(playerScore, computerScore);
+  checkScore();
 });
 
 const paperBtn = document.querySelector('#paperBtn');
 paperBtn.addEventListener('click', () => {
   playerSelection = "paper";
   gameRound();
+  console.log(playerScore, computerScore);
+  checkScore();
 });
 
 const scissBtn = document.querySelector('#scissBtn');
 scissBtn.addEventListener('click', () => {
   playerSelection = "scissors";
   gameRound();
+  console.log(playerScore, computerScore);
+  checkScore();
 });
 
-if (playerScore === 5) {
-  alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
-  playerScore = 0;
-  computerScore = 0;
-} else if (computerScore === 5) {
-  alert("Well well well. Looks like I beat you! Seek revenge and play again, if you dare.");
-  playerScore = 0;
-  computerScore = 0;
+function checkScore () {
+  if (playerScore === 5) {
+    alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
+    playerScore = 0;
+    computerScore = 0;
+  } else if (computerScore === 5) {
+    alert("Well well well. Looks like I beat you! Seek revenge and play again, if you dare.");
+    playerScore = 0;
+    computerScore = 0;
+  }
 }
-
 
 
 //Alert that is the end of the game.
