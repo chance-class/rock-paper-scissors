@@ -56,39 +56,38 @@ function gameRound () {
   }
 }
 
-const rockBtn = document.querySelector(#rockBtn);
+const rockBtn = document.querySelector(rockBtn);
 rockBtn.addEventListener('click', () => {
   let playerSelection = "rock";
   gameRound();
 })
 
-const paperBtn = document.querySelector(#paperBtn);
+const paperBtn = document.querySelector(paperBtn);
 paperBtn.addEventListener('click', () => {
   let playerSelection = "paper";
   gameRound();
 })
 
-const scissBtn = document.querySelector(#scissBtn);
+const scissBtn = document.querySelector(scissBtn);
 scissBtn.addEventListener('click', () => {
   let playerSelection = "scissors";
   gameRound();
 })
 
-
+if (playerScore === 5) {
+  alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
+  playerScore = 0;
+  computerScore = 0;
+} else if (computerScore === 5) {
+  alert("Well well well. Looks like I beat you! Seek revenge and play again, if you dare.");
+  playerScore = 0;
+  computerScore = 0;
+}
 
 
 
 //Alert that is the end of the game.
 
-alert("The computer's score is: " + computerScore + ". Your score is: " + playerScore + ".");
-
-if (computerScore > playerScore) {
-  alert("Well well well. Looks like I beat you! Seek revenge and refresh the page to play again, if you dare.");
-} else if (computerScore < playerScore) {
-  alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
-} else {
-  alert("Hmm. It's a tie. Seems like we're evenly matched... Bet you can't beat me again! Refresh the page to find out.");
-}
 
 
 
