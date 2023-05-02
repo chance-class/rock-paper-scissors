@@ -56,20 +56,20 @@ function gameRound () {
   }
 }
 
-const rockBtn = document.querySelector(rockBtn);
+const rockBtn = document.querySelector('#rockBtn');
 rockBtn.addEventListener('click', () => {
   playerSelection = "rock";
   gameRound();
   console.log(playerScore, computerScore)
 });
 
-const paperBtn = document.querySelector(paperBtn);
+const paperBtn = document.querySelector('#paperBtn');
 paperBtn.addEventListener('click', () => {
   playerSelection = "paper";
   gameRound();
 });
 
-const scissBtn = document.querySelector(scissBtn);
+const scissBtn = document.querySelector('#scissBtn');
 scissBtn.addEventListener('click', () => {
   playerSelection = "scissors";
   gameRound();
