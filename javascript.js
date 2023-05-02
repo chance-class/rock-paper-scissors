@@ -58,21 +58,22 @@ function gameRound () {
 
 const rockBtn = document.querySelector(rockBtn);
 rockBtn.addEventListener('click', () => {
-  let playerSelection = "rock";
+  playerSelection = "rock";
   gameRound();
-})
+  console.log(playerScore, computerScore)
+});
 
 const paperBtn = document.querySelector(paperBtn);
 paperBtn.addEventListener('click', () => {
-  let playerSelection = "paper";
+  playerSelection = "paper";
   gameRound();
-})
+});
 
 const scissBtn = document.querySelector(scissBtn);
 scissBtn.addEventListener('click', () => {
-  let playerSelection = "scissors";
+  playerSelection = "scissors";
   gameRound();
-})
+});
 
 if (playerScore === 5) {
   alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
