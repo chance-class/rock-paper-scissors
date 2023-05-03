@@ -83,7 +83,7 @@ scissBtn.addEventListener('click', () => {
 
 function checkScore () {
   if (playerScore === 5) {
-    alert("Okay okay, fine. You beat me. Revel in your glory if you must, and then refresh the page. I challenge you to a rematch!");
+    alert("Okay okay, fine. You beat me. Revel in your glory if you must. I challenge you to a rematch!");
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
