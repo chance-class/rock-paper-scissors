@@ -15,6 +15,13 @@
   justify-content: center;
 } 
  
-h2 {
+h2, 
+.scoreBoard {
   text-align: center;
+}
+
+.scoreBoard {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px;
 }

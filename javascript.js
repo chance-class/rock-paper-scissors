@@ -14,7 +14,10 @@ function getComputerSelection() {
 let playerScore = 0;
 let computerScore = 0;
 
-alert("Let's play Rock Paper Scissors! First to 5 wins. Think you can beat me?");
+const scoreBoard = document.querySelector('.scoreBoard');
+scoreBoard.textContent = "Seer score: " + computerScore + " Your score: " + playerScore;
+
+//alert("Let's play Rock Paper Scissors! First to 5 wins. Think you can beat me?");
 
 //Compare the computer's choice and the user's choice and declare the winner.
 
@@ -26,34 +29,44 @@ function gameRound () {
   if (playerSelection === "rock") {
     if (computerSelection === "paper") {
       alert("You lose! Paper beats Rock.");
-      return computerScore++;
+      computerScore++;
+      updateScore();
     } else if (computerSelection === "scissors") {
       alert("You win! Rock beats Scissors.");
-      return playerScore++;
+      playerScore++;
+      updateScore();
     } else {
       alert("It's a tie!");
     }
   } else if (playerSelection === "paper") {
     if (computerSelection === "rock"){
       alert("You win! Paper beats Rock.");
-      return playerScore++;
+      playerScore++;
+      updateScore();
     } else if (computerSelection === "scissors") {
       alert("You lose! Scissors beats Paper.");
-      return computerScore++;
+      computerScore++;
+      updateScore();
     } else {
       alert("It's a tie!");
     }
   } else if (playerSelection === "scissors") {
     if (computerSelection === "paper") {
       alert("You win! Scissors beats Paper.");
-      return playerScore++;
+      playerScore++;
+      updateScore();
     } else if (computerSelection === "rock") {
       alert("You lose! Rock beats Scissors.");
-      return computerScore++;
+      computerScore++;
+      updateScore();
     } else {
       alert("It's a tie!");
     }
   }
+}
+
+function updateScore () {
+  scoreBoard.textContent = "Seer score: " + computerScore + " Your score: " + playerScore;
 }
 
 const rockBtn = document.querySelector('#rockBtn');
@@ -81,12 +94,16 @@ scissBtn.addEventListener('click', () => {
   checkScore();
 });
 
+//Alert that is the end of the game.
+
 function checkScore () {
   if (playerScore === 5) {
+    updateScore();
     alert("Okay okay, fine. You beat me. Revel in your glory if you must. I challenge you to a rematch!");
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
+    updateScore();
     alert("Well well well. Looks like I beat you! Seek revenge and play again, if you dare.");
     playerScore = 0;
     computerScore = 0;
@@ -94,7 +111,8 @@ function checkScore () {
 }
 
 
-//Alert that is the end of the game.
+
+
 
 
 
