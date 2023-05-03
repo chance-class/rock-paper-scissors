@@ -30,11 +30,9 @@ function gameRound () {
     if (computerSelection === "paper") {
       alert("You lose! Paper beats Rock.");
       computerScore++;
-      updateScore();
     } else if (computerSelection === "scissors") {
       alert("You win! Rock beats Scissors.");
       playerScore++;
-      updateScore();
     } else {
       alert("It's a tie!");
     }
@@ -42,11 +40,9 @@ function gameRound () {
     if (computerSelection === "rock"){
       alert("You win! Paper beats Rock.");
       playerScore++;
-      updateScore();
     } else if (computerSelection === "scissors") {
       alert("You lose! Scissors beats Paper.");
       computerScore++;
-      updateScore();
     } else {
       alert("It's a tie!");
     }
@@ -54,11 +50,9 @@ function gameRound () {
     if (computerSelection === "paper") {
       alert("You win! Scissors beats Paper.");
       playerScore++;
-      updateScore();
     } else if (computerSelection === "rock") {
       alert("You lose! Rock beats Scissors.");
       computerScore++;
-      updateScore();
     } else {
       alert("It's a tie!");
     }
@@ -75,6 +69,7 @@ rockBtn.addEventListener('click', () => {
   playerSelection = "rock";
   gameRound();
   console.log(playerScore, computerScore);
+  updateScore();
   checkScore();
 });
 
@@ -83,6 +78,7 @@ paperBtn.addEventListener('click', () => {
   playerSelection = "paper";
   gameRound();
   console.log(playerScore, computerScore);
+  updateScore();
   checkScore();
 });
 
@@ -91,6 +87,7 @@ scissBtn.addEventListener('click', () => {
   playerSelection = "scissors";
   gameRound();
   console.log(playerScore, computerScore);
+  updateScore();
   checkScore();
 });
 
@@ -98,12 +95,10 @@ scissBtn.addEventListener('click', () => {
 
 function checkScore () {
   if (playerScore === 5) {
-    updateScore();
     alert("Okay okay, fine. You beat me. Revel in your glory if you must. I challenge you to a rematch!");
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
-    updateScore();
     alert("Well well well. Looks like I beat you! Seek revenge and play again, if you dare.");
     playerScore = 0;
     computerScore = 0;
