@@ -95,11 +95,11 @@ scissBtn.addEventListener('click', () => {
 
 function checkScore () {
   if (playerScore === 5) {
-    alert("Okay okay, fine. You beat me. Revel in your glory if you must. I challenge you to a rematch!");
+    alert("Hmm... My vision must be foggy. But I foresee that you wish to challenge me again! Yes, it's getting clearer... The omens do not look good for you. Still care to try?");
     playerScore = 0;
     computerScore = 0;
   } else if (computerScore === 5) {
-    alert("Well well well. Looks like I beat you! Seek revenge and play again, if you dare.");
+    alert("Well well well. I tried to warn you. No longer shall you deny the power of Sight. Play again, if you dare.");
     playerScore = 0;
     computerScore = 0;
   }
